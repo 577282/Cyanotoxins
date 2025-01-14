@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurotoxins</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/tables.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+<header>
+    <h1>Neurotoxins</h1>
+
+</header>
+    <!-- Side Navigation Bar -->
+    <div class="side-nav">
+        <div class="tabs navigation-tabs">
+            <a href="/" class="tab-link">Datatables</a>
+            <a href="/neurotoxins" class="tab-link">Neurotoxins</a>
+            <div class="sub-tabs">
+                <a href="/anatoxins" class="sub-tab-link">Anatoxins</a>
+                <a href="/anatoxins(s)" class="sub-tab-link">Anatoxins(s)</a>
+                <a href="/saxitoxins" class="sub-tab-link">Saxitoxins</a>
+                <a href="/BMAA" class="sub-tab-link">BMAA</a>
+            </div>
+            <a href="/hepatotoxins" class="tab-link">Hepatotoxins</a>
+            <a href="/dermatotoxins" class="tab-link">Dermatotoxins</a>
+        </div>
+    </div>
+<!-- figures/neurotoxin_mode_of_action.png -->
+
+<!-- Content Section -->
+<div class="content">
+    <!-- Image with text beside it -->
+    <div style="display: flex; margin-top: 80px; width: 100%">
+        <img src="{{ url_for('static', filename='figures/neurotoxin_mode_of_action.png') }}" alt="Neurotoxins Image" style="max-width: 400px; margin-right: 30px;">
+
+        <!-- Text and subheader section -->
+        <div style="width: 100%; margin-top: 10px;">
+            <!-- Subheader -->
+            <p style="font-weight: bold; margin-bottom: 10px;">Neurotoxin classes based on mode of action</p>
+            <!-- Text inside a textarea -->
+            <textarea style="width: 100%; height: 120px; resize: none; border: 1px solid #ccc; padding: 10px;" readonly>
+Neurotoxins are a group of compounds that have clear biological effects on the nervous system but differ in chemical structure and mode of action.
+Anatoxins and saxitoxins are neurotoxin classes with numerous variants.
+The anatoxins consist of three categories: anatoxin-a, homoanatoxin-a, and anatoxin-a(s).
+However, anatoxin-a(s) is structurally unrelated to anatoxin-a and homoanatoxin-a
+            </textarea>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='scripts/tables.js') }}"></script>
+</body>
+</html>
+

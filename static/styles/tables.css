@@ -1,0 +1,257 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Ensure the body takes full height */
+body {
+    display: flex;
+    flex-direction: row;  /* Align header and content side by side */
+    min-height: 100vh;  /* Full height of the viewport */
+}
+
+/* Fixed Sidebar */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 20px;
+}
+
+/* Main content area adjusted */
+.main-content {
+    margin-top: 100px; /* Give space for the fixed header */
+    margin-left: 220px; /* Space for the fixed sidebar */
+    padding: 20px;
+    flex-grow: 1;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
+
+/* Header styles */
+header {
+    background-color: #4682b4;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 1; /* Ensure header stays above other content */
+    width: 100%;
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    /* Make sure header does not stretch vertically */
+    height: 70px;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+    /* General tabs styling */
+.tabs {
+    display: flex;
+    background-color: #333;
+    margin-top: 80px;
+    padding: 0;
+    border-radius: 5px;
+}
+
+/* Tab link styles */
+.tabs .tab-link {
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    flex-grow: 1;
+    border: 1px solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block; /* Ensures links behave like buttons */
+}
+
+/* Hover and active styles for tabs */
+.tabs .tab-link:hover {
+    background-color: #555;
+}
+
+.tabs .tab-link.active {
+    background-color: #4682b4; /* Highlight color for active tab */
+    font-weight: bold; /* Optional: Emphasize active tab */
+    color: white;
+}
+/* General tab styles for both navigation and sheet tabs */
+.tabs .tab-link.active {
+    background-color: #4682b4;
+    color: white;
+}
+
+/* Optional: Different styling for navigation tabs */
+.navigation-tabs .tab-link {
+    background-color: #444;
+}
+
+.navigation-tabs .tab-link:hover {
+    background-color: #007bff;
+}
+
+/* Optional: Different styling for sheet tabs */
+.sheet-tabs .tab-link {
+    background-color: #444444;
+}
+
+.sheet-tabs .tab-link:hover {
+    background-color: #007bff;
+}
+
+
+.tabs button {
+    background-color: #444;
+    color: white;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.tabs button:hover {
+    background-color: #555;
+}
+
+.tabs button.active {
+    background-color: #4682b4;
+}
+
+/* Table Styles */
+.table-container {
+    margin-top: 20px;
+    display: none;
+}
+
+.table-container.active {
+    display: block;
+}
+
+/* Adjust DataTables container to work with layout */
+table.dataTable {
+    /* width: 100% !important;  /* Make sure DataTables uses full available width */
+    margin-bottom: 20px;  /* Add margin to prevent overlap with other content */
+    /*table-layout: fixed;  /* Ensure tables fit within the available space */
+}
+
+
+/* Optional: Styling for the table wrapper */
+.dataTables_wrapper {
+    overflow-x: auto;
+}
+
+/* Additional Styles for DataTables */
+.dataTables_wrapper {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* Italicize the first column of the first sheet */
+.first-sheet table td:first-child,
+.first-sheet table th:first-child {
+    font-style: italic;
+}
+
+/* Styling the page */
+.content {
+    width: 100%;
+    margin: 0 20px;
+    padding-left: 200px;
+}
+
+/* Make toxin types clickable */
+.clickable-toxin {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+}
+
+.side-nav .tabs {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-nav .tab-link {
+    padding: 10px;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+}
+
+.side-nav .tab-link:hover {
+    background-color: #555;
+}
+
+/* Style for sub-tabs under Neurotoxins */
+.sub-tabs {
+    padding-left: 20px;
+}
+
+.sub-tab-link {
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.sub-tab-link:hover {
+    background-color: #666;
+}
+
+ul {
+    list-style-type: none; /* Remove default bullets */
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    padding-left: 20px; /* Indent each level */
+    position: relative;
+}
+
+ul li::before {
+    content: '\2022'; /* Add a bullet manually */
+    position: absolute;
+    left: 0;
+}
+
+ul li ul li::before {
+    content: '\25E6'; /* Use a different bullet for sub-levels */
+}
+
+ul li ul li ul li::before {
+    content: '\25AA'; /* Even more subtle bullet for deeper levels */
+}

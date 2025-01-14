@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dermatotoxins</title>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/tables.css') }}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+<header>
+    <h1>Cyanotoxin Summary</h1>
+
+</header>
+<nav>
+    <div class="tabs navigation-tabs">
+        <a href="/" class="tab-link">Datatables</a>
+        <a href="/neurotoxins" class="tab-link">Neurotoxins</a>
+        <a href="/hepatotoxins" class="tab-link">Hepatotoxins</a>
+        <a href="/dermatotoxins" class="tab-link">Dermatoxins</a>
+    </div>
+</nav>
+<!-- Custom JS from static folder -->
+<script src="{{ url_for('static', filename='scripts/tables.js') }}"></script>
+
+</body>
+</html>
+

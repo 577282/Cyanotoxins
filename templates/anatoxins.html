@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatoxins</title>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/tables.css') }}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+<header>
+    <h1>Anatoxins</h1>
+
+</header>
+<!-- Side Navigation Bar -->
+<div class="side-nav">
+    <div class="tabs navigation-tabs">
+        <a href="/" class="tab-link">Datatables</a>
+        <a href="/neurotoxins" class="tab-link">Neurotoxins</a>
+        <div class="sub-tabs">
+            <a href="/anatoxins" class="sub-tab-link">Anatoxins</a>
+            <a href="/anatoxins(s)" class="sub-tab-link">Anatoxins(s)</a>
+            <a href="/saxitoxins" class="sub-tab-link">Saxitoxins</a>
+            <a href="/BMAA" class="sub-tab-link">BMAA</a>
+        </div>
+        <a href="/hepatotoxins" class="tab-link">Hepatotoxins</a>
+        <a href="/dermatotoxins" class="tab-link">Dermatotoxins</a>
+    </div>
+</div>
+<div class="page-layout" style="display: contents">
+ <!-- Content Section -->
+    <div class="content">
+        <table id="keggTable" class="display" style="margin: 80px 0px; border: solid; width: 600px ">
+            <thead>
+                <tr>
+                    <th style="display: none">Property</th>
+                    <th style="display: none">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background-color: #D4E4F0"><strong>Entry</strong></td>
+                    <td style="background-color: white">C10841&nbsp;&nbsp;&nbsp;&nbsp;Compound</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #D4E4F0"><strong>Name</strong></td>
+                    <td>Anatoxin a; Ethanone, 1-(9-azabicyclo[4.2.1]non-2-en-2-yl)-, (1R)-</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #D4E4F0"><strong>Formula</strong></td>
+                    <td>C10H15NO</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #D4E4F0"><strong>Exact Mass</strong></td>
+                    <td>165.1154</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #D4E4F0"><strong>Mol Weight</strong></td>
+                    <td>165.23</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #D4E4F0"><strong>Structure</strong></td>
+                    <td>
+                        <img src="{{ url_for('static', filename='figures/anatoxin_structure.png') }}" alt="Anatoxin Structure" style="max-width: 300px; margin: 10px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #D4E4F0"><strong>Brite Hierarchy</strong></td>
+                    <td>
+                        <ul>
+                            <li>Phytochemical compounds [BR:br08003]
+                                <ul>
+                                    <li>Alkaloids</li>
+                                    <li>Alkaloids derived from ornithine</li>
+                                    <li>Tropane alkaloids
+                                        <ul>
+                                            <li>C10841 Anatoxin a</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Natural toxins [BR:br08009]
+                                <ul>
+                                    <li>Cyanotoxins</li>
+                                    <li>Alkaloids</li>
+                                    <li>Anatoxins
+                                        <ul>
+                                            <li>C10841 Anatoxin a</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #D4E4F0"><strong>Other Databases</strong></td>
+                    <td>
+                        <ul>
+                            <li>CAS: 64285-06-9</li>
+                            <li>PubChem: 13024</li>
+                            <li>ChEBI: 2706</li>
+                            <li>KNApSAcK: C00002273</li>
+                            <li>NIKKAJI: J18.582E</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<!-- Figure Description Above -->
+<div class="discription" style="width: 800px; margin-top: 80px; margin-right: 100px">
+    <p style="margin-bottom: 20px; margin-top: 10px; font-style: italic; width: 500px">
+        Table 1: Cyanobacteria species identified as producing anatoxin-a, based on isolated strains.
+        Generally, species are referred to here as they are in each paper cited. See footnotes for details.
+    </p>
+
+    <!-- Table -->
+    <table style="width: 500px; border-collapse: collapse; border: 1px solid black;">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th style="border: 1px solid black; padding: 8px; text-align: left; font-size: small">Cyanobacteria Species</th>
+                <th style="border: 1px solid black; padding: 8px; text-align: left; font-size: small">Reference</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; font-size: small; font-style: italic">Anabaena sp.a</td>
+                <td style="border: 1px solid black; padding: 8px; font-size: small">
+                    Sivonen et al. (1989); Bumke-Vogt et al. (1999); James et al. (1997);
+                    Park et al. (1993); Harada et al. (1993); Rapala and Sivonen (1998);
+                    Trainer and Hardy (2015); Ghassempour et al. (2005)
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; font-size: small; font-style: italic">Anabaena circinalis</td>
+                <td style="border: 1px solid black; padding: 8px; font-size: small">
+                    Sivonen et al. (1989); Harada et al. (1993); Bumke-Vogt et al. (1999)
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; font-size: small; font-style: italic">Anabaena crassa</td>
+                <td style="border: 1px solid black; padding: 8px; font-size: small">Bumke-Vogt et al. (1999)</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Anabaena flos-aquae</td>
+                <td style="border: 1px solid black; padding: 8px; font-size: small">
+                    Carmichael et al. (1975); Devlin et al. (1977); Carmichael and Gorham (1978);
+                    Sivonen et al. (1989); Harada et al. (1993); Kangatharalingam and Priscu (1993);
+                    Rapala et al. (1993); Gallon et al. (1994); Bumke-Vogt et al. (1999);
+                    Qian et al. (2017)
+                </td>
+            </tr>
+
+<tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Anabaena lemmermannii</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Onodera et al. (1997)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Anabaena macrospora</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Park et al. (1993)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Anabaena mendotae</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Rapala et al. (1993)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Anabaena planctonica</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">
+                Bruno et al. (1994); Bumke-Vogt et al. (1999)
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Anabaena spiroides</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Park et al. (1993)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Aphanizomenon sp.</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">
+                Sivonen et al. (1989); Harada et al. (1993); Bumke-Vogt et al. (1999);
+                Trainer and Hardy (2015)
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Aphanizomenon gracile</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">
+                Ballot et al. (2010); Cirés et al. (2017); Savela et al. (2017)
+            </td>
+        </tr>
+            <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Aphanizomenon favaloroi</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Moustaka-Gouni et al. (2017)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Aphanizomenon flos-aquae</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">
+                Jackim and Gentile (1968); Sawyer et al. (1968); Alam et al. (1973); Ikawa et al. (1982); Pereira et al. (2000);
+                Ferreira et al. (2001)
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Aphanizomenon issatchenkoi</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Li et al. (2003)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Arthospira fusiformis</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Ballot et al. (2004); Ballot et al. (2005)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Cylindrospermopsis</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Trainer and Hardy (2015)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Cylindrospermopsis raciborskii</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Trainer and Hardy (2015)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Lyngbya sp.</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Park et al. (1993); Bumke-Vogt et al. (1999)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Microcystis aeruginosa</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">
+                Sivonen et al. (1989); Edwards et al. (1992); Harada et al. (1993); James et al. (1997); Bumke-Vogt et al. (1999);
+                Hamill (2001); Aráoz et al. (2005); Cadel-Six et al. (2007); Trainer and Hardy (2015)
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Oscillatoria limnetica</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Osswald et al. (2009)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Phormidium autumnale</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Wood et al. (2007); Wood et al. (2010)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Planktothrix rubescens</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Viaggiu et al. (2004)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Synechocystis</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Trainer and Hardy (2015)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 8px; font-style: italic; font-size: small">Tychonema bourrellyi</td>
+            <td style="border: 1px solid black; padding: 8px; font-size: small">Shams et al. (2015)</td>
+        </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+        <!-- Figure Description Below -->
+    <p style="margin: 20px 0; font-style: italic;">
+        a The planktonic Anabaena sp. was later classified as Dolichospermum.
+        (Wacklin et al., 2009; Li et al., 2016)
+    </p>
+</div>
+</div>
+
+
+
+
+
+<!-- Custom JS from static folder -->
+<script src="{{ url_for('static', filename='scripts/tables.js') }}"></script>
+<style>
+    table.dataTable.stripe > tbody > tr.odd > *,
+    table.dataTable.display > tbody > tr.odd > * {
+    box-shadow: none !important;
+    }
+    #keggTable {
+        /* table-layout: fixed; /* Ensures fixed-width columns */
+        width: 100%; /* Makes the table fill the container */
+    }
+
+    #keggTable th, #keggTable td {
+        word-wrap: break-word; /* Break long words */
+    }
+
+    #keggTable td:first-child {
+        width: 15%;
+    }
+
+    #keggTable td:nth-child(2) {
+        width: 80%;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        // Check if the table is already a DataTable instance
+        if ($.fn.DataTable.isDataTable('#keggTable')) {
+            $('#keggTable').DataTable().destroy();
+        }
+
+        // Initialize DataTable with sorting disabled
+        $('#keggTable').DataTable({
+            paging: false,
+            searching: false,
+            info: false,
+            ordering: false, // Disable sorting
+            autoWidth: false, // Prevents DataTables from overriding column widths
+            columnDefs: [
+                { targets: 0, width: '20%' }, // First column (Key)
+                { targets: 1, width: '80%' }  // Second column (Value)
+            ]
+        });
+    });
+</script>
+</body>
+</html>
+
